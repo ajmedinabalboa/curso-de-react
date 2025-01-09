@@ -8,7 +8,8 @@ import reactLogo from "../assets/react.svg"
 import githubLogo from "../assets/github.svg"
 const Home = () => {
     return (
-        <div>
+        <div>         
+            
             <OpenLink redirectURL="https://vite.dev" logoIMG={viteLogo} altDescription="VITE"/>
             <OpenLink redirectURL="https://react.dev" logoIMG={reactLogo} altDescription="REACT"/>
             <OpenLink redirectURL="https://github.com/ajmedinabalboa/curso-de-react" logoIMG={githubLogo} altDescription="GITHUB"/>

@@ -1,15 +1,26 @@
-const SearchBar = () => {
-    return (
-        <form>
-          <input type="text" placeholder="Search..." />
-          <br/>
-          <label>
-            <input type="checkbox" />
-            {' '}
-            Only show products in stock
-          </label>
-        </form>
-      );
+const SearchBar = ({
+  filterText,
+  inStockOnly,
+  onFilterTextChange,
+  onInStockOnlyChange
+}) => {
+  return (
+    <form>
+      <input 
+        type="text" 
+        value={filterText} placeholder="Search..." 
+        onChange={(e) => onFilterTextChange(e.target.value)} />
+      <label>
+        <br/>
+        <input 
+          type="checkbox" 
+          checked={inStockOnly} 
+          onChange={(e) => onInStockOnlyChange(e.target.checked)} />
+        {' '}
+        Only show products in stock
+      </label>
+    </form>
+  );
 };
 
 export default SearchBar;
